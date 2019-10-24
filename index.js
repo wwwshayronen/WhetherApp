@@ -4,7 +4,7 @@ let loc = document.querySelector(".loc");
 let def = document.querySelector(".def");
 
 // get data from API
-fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=4c4fa0bb98f3793be39999a264594b99`)
+fetch(`https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=4c4fa0bb98f3793be39999a264594b99`)
   .then(res => res.json())
   .then(data => {
     console.log(data)
@@ -40,18 +40,3 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&app
     
 
   })
-
-
-
-
-
-  let arr = [1, 1, 2, 2, 3, 4, 5, 6];
-
-  let counts = arr.reduce((a, c) => {
-    a[c] = (a[c] || 0) + 1;
-    return a;
-  }, {});
-  let maxCount = Math.max(...Object.values(counts));
-  let mostFrequent = Object.keys(counts).filter(k => counts[k] === maxCount);
-
-  console.log(Math.min(...mostFrequent))
