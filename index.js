@@ -4,7 +4,7 @@ let loc = document.querySelector(".loc");
 let def = document.querySelector(".def");
 
 // get data from API
-fetch(`https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=4c4fa0bb98f3793be39999a264594b99`)
+fetch(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=4c4fa0bb98f3793be39999a264594b99`)
   .then(res => res.json())
   .then(data => {
     console.log(data)
